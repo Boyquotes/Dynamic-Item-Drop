@@ -106,16 +106,17 @@ __meta__ = {
 margin_top = 100.0
 margin_right = 131.0
 margin_bottom = 114.0
-hint_tooltip = "The maximum jump height above the chest."
+hint_tooltip = "The maximum jump height above the destination point. For best results, set higher than the chest."
 mouse_filter = 1
-text = "Max jump height: 32"
+text = "Max jump height: 48"
 
 [node name="JSlider" type="HSlider" parent="CanvasLayer/Controls"]
 margin_top = 118.0
 margin_right = 131.0
 margin_bottom = 134.0
+min_value = 1.0
 max_value = 270.0
-value = 32.0
+value = 48.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -167,7 +168,6 @@ min_value = 0.1
 max_value = 1.0
 step = 0.1
 value = 0.5
-
 [connection signal="tween_all_completed" from="DroppableItem/Tween" to="DroppableItem" method="_on_tween_all_completed"]
 [connection signal="pressed" from="CanvasLayer/Controls/Play" to="." method="_on_Play_pressed"]
 [connection signal="value_changed" from="CanvasLayer/Controls/XSlider" to="CanvasLayer/Controls" method="_on_XSlider_value_changed"]
